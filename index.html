@@ -201,32 +201,27 @@
             <button onclick="copyToClipboard('script28')">Copy</button>
         </div>
 
-        <div class="footer">
-            <p>Made by <strong>skibidi989</strong> on Discord</p>
+        <!-- 1x1x1x1 GUI Script -->
+        <div class="list-item">
+            <h2>28. 1x1x1x1 GUI</h2>
+            <pre><code id="script29">require(6858594080).KrnKidsSus("name")</code></pre>
+            <button onclick="copyToClipboard('script29')">Copy</button>
         </div>
     </div>
 
+    <div class="footer">
+        <p>Made by Skibidi989 on Discord</p>
+    </div>
+
     <script>
-        function copyToClipboard(id) {
-            // Get the text from the code element
-            var copyText = document.getElementById(id).innerText;
-
-            // Create a temporary textarea element
-            var textArea = document.createElement('textarea');
-            textArea.value = copyText;
+        function copyToClipboard(scriptId) {
+            const text = document.getElementById(scriptId).textContent;
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
             document.body.appendChild(textArea);
-
-            // Select the text inside the textarea
             textArea.select();
-            textArea.setSelectionRange(0, 99999); // For mobile devices
-
-            // Execute the copy command
             document.execCommand('copy');
-
-            // Remove the textarea element after copying
             document.body.removeChild(textArea);
-
-            // Alert the user that the text has been copied
             alert("Text copied to clipboard!");
         }
     </script>
